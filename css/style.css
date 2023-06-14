@@ -1,0 +1,130 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  color: #444444;
+}
+* {
+  touch-action: manipulation;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#c {
+  width: 100%;
+  height: 100%;
+  display: block;
+  top: 0;
+  position: absolute;
+  left: 0;
+}
+
+.title {
+  color: white;
+  text-shadow: 0 0 2px #000;
+  z-index: 2;
+  position: inherit;
+  font-size: 3rem;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -75%);
+}
+
+.controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.options {
+  position: absolute;
+  left: 0;
+  bottom: 200px;
+  display: flex;
+}
+.option {
+  border-radius: 25px;
+
+  background-size: cover;
+  margin-left: 1em;
+  background-position: 50%;
+  background-color: beige;
+  margin-bottom: 3px;
+  padding: 10px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tray {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  left: 46%;
+  top: 25%;
+}
+
+.tray__slide {
+  position: absolute;
+  display: flex;
+  left: 0;
+  /*   transform: translateX(-50%);
+  animation: wheelin 1s 2s ease-in-out forwards; */
+}
+.colorpalette_color {
+  margin: 1em 0.3em 1em;
+  transition: 0.1s ease-in;
+  height: 50px;
+  border-radius: 25px;
+  min-width: 50px;
+  flex: 1;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  background-position: center;
+}
+.tray__swatch:nth-child(5n + 5) {
+  margin-right: 20px;
+}
+.drag-notice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  width: 10em;
+  height: 10em;
+  box-sizing: border-box;
+  font-size: 0.9em;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 5em;
+  background: white;
+  position: absolute;
+}
+.drag-notice.start {
+  animation: popout 0.25s 3s forwards;
+}
+
+#c {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
